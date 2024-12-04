@@ -53,75 +53,82 @@
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 0); this.onclick = null;">
             <div class="front">1</div>
-            <div class="back">食物</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 1); this.onclick = null;">
             <div class="front">2</div>
-            <div class="back">天氣</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 2); this.onclick = null;">
             <div class="front">3</div>
-            <div class="back">愛情</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 3); this.onclick = null;">
             <div class="front">4</div>
-            <div class="back">張韶涵</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 4); this.onclick = null;">
             <div class="front">5</div>
-            <div class="back">五月天</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 5); this.onclick = null;">
             <div class="front">6</div>
-            <div class="back">地點</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 6); this.onclick = null;">
             <div class="front">7</div>
-            <div class="back">數字</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 7); this.onclick = null;">
             <div class="front">8</div>
-            <div class="back">身體部位</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 8); this.onclick = null;">
             <div class="front">9</div>
-            <div class="back">情緒</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 9); this.onclick = null;">
             <div class="front">10</div>
-            <div class="back">城市</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 10); this.onclick = null;">
             <div class="front">11</div>
-            <div class="back">周杰倫</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 11); this.onclick = null;">
             <div class="front">12</div>
-            <div class="back">時間</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 12); this.onclick = null;">
             <div class="front">13</div>
-            <div class="back">盧廣仲</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 13); this.onclick = null;">
             <div class="front">14</div>
-            <div class="back">動物</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 14); this.onclick = null;">
             <div class="front">15</div>
-            <div class="back">大自然</div>
+            <div class="back"></div>
         </div>
-        <div class="grid-item" onclick="flipCard(this); this.onclick = null;">
+        <div class="grid-item" onclick="flipCard(this, 15); this.onclick = null;">
             <div class="front">16</div>
-            <div class="back">顏色</div>
+            <div class="back"></div>
         </div>
     </div>
 
     <script>
-        function flipCard(card) {
+        const backContent = [
+            "食物", "天氣", "愛情", "張韶涵", "五月天", "地點", "數字",
+            "身體部位", "情緒", "城市", "周傑倫", "時間", "盧廣仲",
+            "動物", "大自然", "顏色"
+        ];
+
+        function flipCard(card, index) {
             card.classList.add('flipped');
+            card.querySelector('.back').innerText = backContent[index];
         }
     </script>
 </body>
